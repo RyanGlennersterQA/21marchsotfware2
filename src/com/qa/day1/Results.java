@@ -2,11 +2,11 @@ package com.qa.day1;
 
 public class Results {
 	
-	int physicsResult;
-	int chemistryResult;
-	int biologyResult;
-	int total;
-	double percentage;
+	static int physicsResult;
+	static int chemistryResult;
+	static int biologyResult;
+	static int total;
+	static double percentage;
 	
 	/*A person takes 3 exams in college, Physics, Chemistry, and Biology, each exam has a maximum of 150 marks.
 	 * When all the exam marks have been added together, we can find the overall percentage that the person has
@@ -20,7 +20,7 @@ public class Results {
 	Method 2 - which finds and displays the percentage that the person received for the exams overall.	
 	*/
 	
-	public void testResults(int result1, int result2, int result3) {
+	public static void testResults(int result1, int result2, int result3) {
 		total = result1 + result2 + result3;
 		physicsResult = result1;
 		chemistryResult = result2;
@@ -31,7 +31,7 @@ public class Results {
 		System.out.println("Your biology mark is:" + biologyResult);
 	}
 	
-	public void percentage() {
+	public static void percentage() {
 		percentage = total * 100 / 450;
 		System.out.println("Your overall percentage is: " + percentage + "%");
 	}
